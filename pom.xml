@@ -15,7 +15,8 @@
     <name>HospitalAutomationSystem</name>
     <description>HospitalAutomationSystem</description>
     <modules>
-        <module>Auth</module>
+        <module>auth</module>
+        <module>chat</module>
     </modules>
     <url/>
     <licenses>

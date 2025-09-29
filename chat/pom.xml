@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.liquidator.app</groupId>
-    <artifactId>Chat</artifactId>
+    <artifactId>chat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Chat</name>
     <description>Chat</description>

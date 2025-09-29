@@ -1,4 +1,4 @@
-package com.liquidator.app.chat.entity;
+package com.liquidator.app.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

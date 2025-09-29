@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.liquidator.app</groupId>
-    <artifactId>Auth</artifactId>
+    <artifactId>auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Auth</name>
     <description>Auth</description>
@@ -94,6 +94,33 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.4.5</version>
+                <configuration>
+                    <from>
+                        <image>eclipse-temurin:21-jdk</image>
+                    </from>
+                    <to>
+                        <image>${project.artifactId}</image>
+                    </to>
+                    <container>
+                        <jvmFlags>
+                            <jvmFlag>-Dspring.profiles.active=docker</jvmFlag>
+                        </jvmFlags>
+                    </container>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <!-- Change from 'build' to 'dockerBuild' for local builds -->
+                            <goal>dockerBuild</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
